@@ -1,25 +1,11 @@
-# Eclipse stuff
-.classpath
-.project
-.settings
-.metadata
-.recommenders
-.ucdetector_reports
-
-# various other potential build files
-target
-build
+# Ignore Gradle project-specific cache directory
 .gradle
-gradle
-.idea
-bin
-dist
-out
 
-# Filesystem dust
-Thumbs.db
-.DS_Store
-*.lock
-*.launch
-/gradlew.bat
-/gradlew
+# Ignore Gradle build output directory
+build
+
+# Eclipse
+.project
+.classpath
+.settings/
+bin/
