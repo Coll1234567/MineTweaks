@@ -17,6 +17,7 @@ import me.jishuna.jishlib.config.Path;
 import me.jishuna.jishlib.config.ReloadableInstanceDataHolder;
 import me.jishuna.jishlib.event.EventBus;
 import me.jishuna.jishlib.inventory.InventorySession;
+import me.jishuna.jishlib.util.StringUtils;
 
 public abstract class Tweak implements Listener, Comparable<Tweak> {
     private static final File TWEAK_FOLDER = new File(Plugin.getInstance().getDataFolder(), "Tweaks");
@@ -40,7 +41,7 @@ public abstract class Tweak implements Listener, Comparable<Tweak> {
         this.name = name;
         this.category = category;
 
-        this.displayName = name.replace('-', ' ');
+        this.displayName = StringUtils.capitalizeAll(name.replace('-', ' '));
     }
 
     public void reload() {
