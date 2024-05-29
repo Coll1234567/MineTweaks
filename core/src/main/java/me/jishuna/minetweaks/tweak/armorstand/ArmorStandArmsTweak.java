@@ -5,8 +5,6 @@ import net.md_5.bungee.api.ChatColor;
 import org.bukkit.entity.ArmorStand;
 import org.bukkit.event.entity.EntityPlaceEvent;
 import me.jishuna.jishlib.event.EventBus;
-import me.jishuna.jishlib.inventory.Inventories;
-import me.jishuna.minetweaks.inventory.TweakListInventory;
 import me.jishuna.minetweaks.tweak.Category;
 import me.jishuna.minetweaks.tweak.RegisterTweak;
 import me.jishuna.minetweaks.tweak.Tweak;
@@ -30,7 +28,5 @@ public class ArmorStandArmsTweak extends Tweak {
         if (event.getEntity() instanceof ArmorStand stand) {
             stand.setArms(true);
         }
-
-        Inventories.openInventory(event.getPlayer(), new TweakListInventory());
     }
 }
