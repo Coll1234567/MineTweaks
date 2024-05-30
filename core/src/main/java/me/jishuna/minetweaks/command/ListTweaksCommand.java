@@ -7,10 +7,10 @@ import me.jishuna.jishlib.command.node.RootNode;
 import me.jishuna.jishlib.inventory.Inventories;
 import me.jishuna.minetweaks.inventory.TweakListInventory;
 
-public class TestCommand extends RootNode {
+public class ListTweaksCommand extends RootNode {
 
-    public TestCommand() {
-        super("temp");
+    public ListTweaksCommand() {
+        super("minetweaks.command.list");
     }
 
     @Override
