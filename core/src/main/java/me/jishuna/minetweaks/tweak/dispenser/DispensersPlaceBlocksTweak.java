@@ -8,12 +8,14 @@ import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
+import org.bukkit.block.Container;
 import org.bukkit.block.data.Directional;
 import org.bukkit.event.block.BlockDispenseEvent;
 import org.bukkit.inventory.ItemStack;
 import me.jishuna.jishlib.config.Comment;
 import me.jishuna.jishlib.config.Path;
 import me.jishuna.jishlib.event.EventBus;
+import me.jishuna.jishlib.util.Tasks;
 import me.jishuna.minetweaks.tweak.Category;
 import me.jishuna.minetweaks.tweak.RegisterTweak;
 import me.jishuna.minetweaks.tweak.Tweak;
@@ -65,10 +67,11 @@ public class DispensersPlaceBlocksTweak extends Tweak {
             return;
         }
 
+        ItemStack removed = event.getItem().clone();
         event.setItem(new ItemStack(Material.AIR));
 
         if (block.getType().isAir() && type.createBlockData().isSupported(block)) {
-            // TODO remove item from inventory
+            Tasks.run(() -> ((Container) event.getBlock().getState()).getInventory().removeItem(removed));
             block.setType(type);
 
             if (block.getBlockData() instanceof Directional dir && dir.getFaces().contains(directional.getFacing())) {
