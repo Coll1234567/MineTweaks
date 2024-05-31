@@ -12,6 +12,7 @@ public interface ToggleableTweak {
     default boolean toggle(Player player) {
         String name = ((Tweak) this).getName();
         List<String> disabled = player.getPersistentDataContainer().getOrDefault(KEY, PersistentDataType.LIST.strings(), new ArrayList<>());
+        disabled = new ArrayList<>(disabled);
 
         boolean enabled = true;
         if (disabled.contains(name)) {

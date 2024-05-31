@@ -13,5 +13,7 @@ public class MineTweaksCommand extends RootNode {
 
         addChildNode("list", listCommand);
         addChildNode("reload", new ReloadCommand());
+        addChildNode("toggle", new ToggleCommand());
+        addChildNode("status", new StatusCommand());
     }
 }

@@ -9,7 +9,7 @@ import me.jishuna.minetweaks.inventory.TweakListInventory;
 
 public class ListTweaksCommand extends RootNode {
 
-    public ListTweaksCommand() {
+    protected ListTweaksCommand() {
         super("minetweaks.command.list");
     }
 

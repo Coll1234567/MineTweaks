@@ -9,7 +9,7 @@ import me.jishuna.jishlib.util.Components;
 
 public class ReloadCommand extends RootNode {
 
-    public ReloadCommand() {
+    protected ReloadCommand() {
         super("minetweaks.command.reload");
     }
 
