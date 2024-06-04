@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
-import net.md_5.bungee.api.ChatColor;
 import org.bukkit.GameMode;
 import org.bukkit.Material;
 import org.bukkit.entity.EntityType;
@@ -26,7 +25,7 @@ public class ElytraTakeoffTweak extends Tweak {
 
     public ElytraTakeoffTweak() {
         super("elytra-takeoff", Category.MISC);
-        this.description = List.of(ChatColor.GRAY + "Allows players to easily take off with an elytra by right clicking with a firework while on the ground.");
+        this.description = List.of("<gray>Allows players to easily take off with an elytra by right clicking with a firework while on the ground.");
     }
 
     @Override

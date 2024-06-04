@@ -1,7 +1,6 @@
 package me.jishuna.minetweaks.tweak.item;
 
 import java.util.List;
-import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.entity.EntityResurrectEvent;
@@ -22,8 +21,8 @@ public class TotemCooldownTweak extends Tweak {
     public TotemCooldownTweak() {
         super("totem-cooldown", Category.ITEM);
         this.description = List
-                .of(ChatColor.GRAY + "Adds a cooldown to totems of undying, preventing them from being used in quick succession.", "",
-                        ChatColor.GRAY + "Cooldown: %cooldown% seconds.");
+                .of("<gray>Adds a cooldown to totems of undying, preventing them from being used in quick succession.", "",
+                        "<gray>Cooldown: %cooldown% seconds.");
     }
 
     @Override

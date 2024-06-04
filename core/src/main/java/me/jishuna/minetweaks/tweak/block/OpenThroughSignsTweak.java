@@ -1,7 +1,6 @@
 package me.jishuna.minetweaks.tweak.block;
 
 import java.util.List;
-import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Tag;
 import org.bukkit.block.Block;
 import org.bukkit.block.Container;
@@ -22,8 +21,8 @@ public class OpenThroughSignsTweak extends Tweak implements ToggleableTweak {
     public OpenThroughSignsTweak() {
         super("open-through-signs", Category.BLOCK);
         this.description = List
-                .of(ChatColor.GRAY + "Allows opening containers that signs are attached to by right clicking them.",
-                        ChatColor.GRAY + "Sneaking will allow interacting with the sign as normal.");
+                .of("<gray>Allows opening containers that signs are attached to by right clicking them.",
+                        "<gray>Sneaking will allow interacting with the sign as normal.");
     }
 
     @Override

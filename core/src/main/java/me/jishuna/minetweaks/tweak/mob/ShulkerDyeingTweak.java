@@ -1,7 +1,6 @@
 package me.jishuna.minetweaks.tweak.mob;
 
 import java.util.List;
-import net.md_5.bungee.api.ChatColor;
 import org.bukkit.GameMode;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Shulker;
@@ -19,7 +18,7 @@ public class ShulkerDyeingTweak extends Tweak {
 
     public ShulkerDyeingTweak() {
         super("shulker-dyeing", Category.MOB);
-        this.description = List.of(ChatColor.GRAY + "Allows players to dye living shulkers using any color of dye.");
+        this.description = List.of("<gray>Allows players to dye living shulkers using any color of dye.");
     }
 
     @Override

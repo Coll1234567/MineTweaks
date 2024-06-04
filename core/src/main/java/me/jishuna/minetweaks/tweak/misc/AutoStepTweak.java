@@ -2,7 +2,6 @@ package me.jishuna.minetweaks.tweak.misc;
 
 import java.util.Iterator;
 import java.util.List;
-import net.md_5.bungee.api.ChatColor;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.attribute.AttributeInstance;
 import org.bukkit.attribute.AttributeModifier;
@@ -20,7 +19,7 @@ public class AutoStepTweak extends Tweak {
 
     public AutoStepTweak() {
         super("auto-step", Category.MISC);
-        this.description = List.of(ChatColor.GRAY + "Allows players to automatically step up one block.");
+        this.description = List.of("<gray>Allows players to automatically step up one block.");
     }
 
     @Override

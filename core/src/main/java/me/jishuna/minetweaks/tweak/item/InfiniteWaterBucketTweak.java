@@ -1,7 +1,6 @@
 package me.jishuna.minetweaks.tweak.item;
 
 import java.util.List;
-import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.Registry;
@@ -33,8 +32,8 @@ public class InfiniteWaterBucketTweak extends Tweak {
     public InfiniteWaterBucketTweak() {
         super("infinite-water-bucket", Category.ITEM);
         this.description = List
-                .of(ChatColor.GRAY + "Allows the creation of infinite water buckets by combining a water bucket with an infinity enchanted book in an anvil.", "",
-                        ChatColor.GRAY + "Level Cost: %cost%");
+                .of("<gray>Allows the creation of infinite water buckets by combining a water bucket with an infinity enchanted book in an anvil.", "",
+                        "<gray>Level Cost: %cost%");
     }
 
     @Override

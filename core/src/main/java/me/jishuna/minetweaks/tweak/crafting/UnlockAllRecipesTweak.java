@@ -3,7 +3,6 @@ package me.jishuna.minetweaks.tweak.crafting;
 import com.google.common.collect.Streams;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
-import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Bukkit;
 import org.bukkit.Keyed;
 import org.bukkit.entity.Player;
@@ -19,7 +18,7 @@ public class UnlockAllRecipesTweak extends Tweak {
 
     public UnlockAllRecipesTweak() {
         super("unlock-all-recipes", Category.CRAFTING);
-        this.description = List.of(ChatColor.GRAY + "Unlocks all recipes for players when they join the server.");
+        this.description = List.of("<gray>Unlocks all recipes for players when they join the server.");
     }
 
     @Override

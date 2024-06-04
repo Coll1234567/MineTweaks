@@ -1,7 +1,6 @@
 package me.jishuna.minetweaks.tweak.block;
 
 import java.util.List;
-import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.Particle;
 import org.bukkit.block.Block;
@@ -19,8 +18,8 @@ public class AnvilCobblestoneTweak extends Tweak {
     public AnvilCobblestoneTweak() {
         super("anvil-cobblestone-conversion", Category.BLOCK);
         this.description = List
-                .of(ChatColor.GRAY + "Allows anvils to convert cobblestone into sand when landing on top of it.",
-                        ChatColor.GRAY + "This allows for renewable sand without duplication exploits.");
+                .of("<gray>Allows anvils to convert cobblestone into sand when landing on top of it.",
+                        "<gray>This allows for renewable sand without duplication exploits.");
     }
 
     @Override

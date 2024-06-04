@@ -3,7 +3,6 @@ package me.jishuna.minetweaks.tweak.block;
 import java.util.List;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.minimessage.tag.resolver.Formatter;
-import net.md_5.bungee.api.ChatColor;
 import org.bukkit.block.Block;
 import org.bukkit.block.data.type.Beehive;
 import org.bukkit.event.Event.Result;
@@ -29,7 +28,7 @@ public class BeehiveDisplayTweak extends Tweak {
 
     public BeehiveDisplayTweak() {
         super("beehive-display", Category.BLOCK);
-        this.description = List.of(ChatColor.GRAY + "Right clicking on a beehive or bee nest with an empty hand will show information about the amount of honey and number of bees within the hive.");
+        this.description = List.of("<gray>Right clicking on a beehive or bee nest with an empty hand will show information about the amount of honey and number of bees within the hive.");
     }
 
     @Override

@@ -5,6 +5,10 @@ plugins {
 	id("net.minecrell.plugin-yml.bukkit") version "0.6.0"
 }
 
+configurations.all {
+    resolutionStrategy.cacheChangingModulesFor(0, "seconds")
+}
+
 tasks.withType<JavaCompile> {
     options.encoding = "UTF-8"
 }

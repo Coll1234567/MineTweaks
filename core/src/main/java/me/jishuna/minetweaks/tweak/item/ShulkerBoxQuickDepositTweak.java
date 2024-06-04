@@ -2,7 +2,6 @@ package me.jishuna.minetweaks.tweak.item;
 
 import java.util.HashMap;
 import java.util.List;
-import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Tag;
 import org.bukkit.block.Container;
 import org.bukkit.event.inventory.ClickType;
@@ -20,7 +19,7 @@ public class ShulkerBoxQuickDepositTweak extends Tweak {
 
     public ShulkerBoxQuickDepositTweak() {
         super("shulker-box-quick-deposit", Category.ITEM);
-        this.description = List.of(ChatColor.GRAY + "Allows players to quickly deposit items into shulker boxes in their inventory by right clicking.");
+        this.description = List.of("<gray>Allows players to quickly deposit items into shulker boxes in their inventory by right clicking.");
     }
 
     @Override

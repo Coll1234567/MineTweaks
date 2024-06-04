@@ -2,11 +2,13 @@ package me.jishuna.minetweaks.inventory;
 
 import java.util.Collection;
 import java.util.Comparator;
+import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.minimessage.tag.resolver.Formatter;
 import net.kyori.adventure.text.minimessage.tag.resolver.Placeholder;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.profile.PlayerProfile;
+import me.jishuna.jishlib.Constants;
 import me.jishuna.jishlib.inventory.ClickContext;
 import me.jishuna.jishlib.inventory.PagedCustomInventory;
 import me.jishuna.jishlib.item.ItemBuilder;
@@ -36,10 +38,16 @@ public class TweakListInventory extends PagedCustomInventory<Tweak> {
 
     @Override
     protected ItemStack asItemStack(Tweak tweak) {
+        Component[] description = tweak
+                .getDescription()
+                .stream()
+                .map(s -> Constants.MINI_MESSAGE.deserialize(s, tweak.getTagResolvers()))
+                .toArray(Component[]::new);
+
         return ItemBuilder
                 .of(Material.PLAYER_HEAD)
                 .name(Messages.get("tweak.name", Placeholder.unparsed("name", tweak.getDisplayName())))
-                .lore(tweak.getDescription())
+                .lore(description)
                 .skullProfile(tweak.isEnabled() ? ENABLED : DISABLED)
                 .build();
     }

@@ -1,7 +1,6 @@
 package me.jishuna.minetweaks.tweak.item;
 
 import java.util.List;
-import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event.Result;
@@ -19,7 +18,7 @@ public class SweetBerryPlantingTweak extends Tweak implements ToggleableTweak {
 
     public SweetBerryPlantingTweak() {
         super("sweet-berry-planting", Category.ITEM);
-        this.description = List.of(ChatColor.GRAY + "Stops players from planting sweet berries when trying to eat them, players must sneak to plant them.");
+        this.description = List.of("<gray>Stops players from planting sweet berries when trying to eat them, players must sneak to plant them.");
     }
 
     @Override

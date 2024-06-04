@@ -1,7 +1,6 @@
 package me.jishuna.minetweaks.tweak.mob;
 
 import java.util.List;
-import net.md_5.bungee.api.ChatColor;
 import org.bukkit.entity.EntityType;
 import org.bukkit.event.entity.EntityChangeBlockEvent;
 import me.jishuna.jishlib.event.EventBus;
@@ -14,7 +13,7 @@ public class EndermanGriefingTweak extends Tweak {
 
     public EndermanGriefingTweak() {
         super("disable-enderman-griefing", Category.MOB);
-        this.description = List.of(ChatColor.GRAY + "Prevents enderman from picking up or placing blocks.");
+        this.description = List.of("<gray>Prevents enderman from picking up or placing blocks.");
     }
 
     @Override

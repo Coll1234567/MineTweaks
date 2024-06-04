@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
@@ -43,7 +42,7 @@ public class DispensersPlaceBlocksTweak extends Tweak {
 
     public DispensersPlaceBlocksTweak() {
         super("dispenser-block-placement", Category.DISPENSER);
-        this.description = List.of(ChatColor.GRAY + "Allows dispensers to place blocks in front of them when powered.");
+        this.description = List.of("<gray>Allows dispensers to place blocks in front of them when powered.");
     }
 
     @Override

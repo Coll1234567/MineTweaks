@@ -1,7 +1,6 @@
 package me.jishuna.minetweaks.tweak.mob;
 
 import java.util.List;
-import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.EntityType;
 import org.bukkit.event.entity.EntityInteractEvent;
@@ -15,7 +14,7 @@ public class DisableMobTramplingTweak extends Tweak {
     public DisableMobTramplingTweak() {
         super("disable-mob-trampling", Category.MOB);
         this.description = List
-                .of(ChatColor.GRAY + "Prevents mobs from trampling farmland.");
+                .of("<gray>Prevents mobs from trampling farmland.");
     }
 
     @Override

@@ -1,7 +1,6 @@
 package me.jishuna.minetweaks.tweak.armorstand;
 
 import java.util.List;
-import net.md_5.bungee.api.ChatColor;
 import org.bukkit.entity.ArmorStand;
 import org.bukkit.event.entity.EntityPlaceEvent;
 import me.jishuna.jishlib.event.EventBus;
@@ -15,8 +14,8 @@ public class ArmorStandArmsTweak extends Tweak {
     public ArmorStandArmsTweak() {
         super("armor-stand-arms", Category.ARMOR_STAND);
         this.description = List
-                .of(ChatColor.GRAY + "Automatically gives armor stands arms when a player places them.",
-                        ChatColor.GRAY + "This allows players to display items in their hands.");
+                .of("<gray>Automatically gives armor stands arms when a player places them.",
+                        "<gray>This allows players to display items in their hands.");
     }
 
     @Override

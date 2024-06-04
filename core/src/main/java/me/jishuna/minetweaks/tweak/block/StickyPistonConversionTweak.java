@@ -1,7 +1,6 @@
 package me.jishuna.minetweaks.tweak.block;
 
 import java.util.List;
-import net.md_5.bungee.api.ChatColor;
 import org.bukkit.GameMode;
 import org.bukkit.Material;
 import org.bukkit.Sound;
@@ -22,7 +21,7 @@ public class StickyPistonConversionTweak extends Tweak {
 
     public StickyPistonConversionTweak() {
         super("sticky-piston-conversion", Category.BLOCK);
-        this.description = List.of(ChatColor.GRAY + "Allows players to quickly convert pistons into sticky pistons by right clicking them while holding a slimeball.");
+        this.description = List.of("<gray>Allows players to quickly convert pistons into sticky pistons by right clicking them while holding a slimeball.");
     }
 
     @Override

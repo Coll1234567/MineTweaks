@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
-import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.data.Ageable;
@@ -37,7 +36,7 @@ public class RightClickHarvestingTweak extends Tweak implements ToggleableTweak 
 
     public RightClickHarvestingTweak() {
         super("right-click-harvesting", Category.FARMING);
-        this.description = List.of(ChatColor.GRAY + "Allows players to quickly harvest fully-grown crops by right clicking.");
+        this.description = List.of("<gray>Allows players to quickly harvest fully-grown crops by right clicking.");
     }
 
     @Override

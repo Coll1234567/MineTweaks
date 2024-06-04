@@ -3,7 +3,6 @@ package me.jishuna.minetweaks.tweak.mob;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
-import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Creeper;
@@ -35,7 +34,7 @@ public class CreeperGriefingTweak extends Tweak {
 
     public CreeperGriefingTweak() {
         super("nerf-creeper-griefing", Category.MOB);
-        this.description = List.of(ChatColor.GRAY + "Allows reducing or disabling the damage caused by creepers when they explode.");
+        this.description = List.of("<gray>Allows reducing or disabling the damage caused by creepers when they explode.");
     }
 
     @Override

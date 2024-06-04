@@ -1,16 +1,11 @@
 package me.jishuna.minetweaks.tweak;
 
 import java.io.File;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Objects;
-import net.md_5.bungee.api.ChatColor;
+import net.kyori.adventure.text.minimessage.tag.resolver.TagResolver;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
-import org.bukkit.util.ChatPaginator;
 import me.jishuna.jishlib.Plugin;
 import me.jishuna.jishlib.config.Comment;
 import me.jishuna.jishlib.config.Path;
@@ -32,7 +27,7 @@ public abstract class Tweak implements Listener, Comparable<Tweak> {
 
     @Path("description")
     @Comment("The description of this tweak as seen in game.")
-    protected List<String> description = List.of(ChatColor.GRAY + "No Description");
+    protected List<String> description = List.of("<gray>No Description");
 
     private final String name;
     private final Category category;
@@ -48,14 +43,6 @@ public abstract class Tweak implements Listener, Comparable<Tweak> {
         new ReloadableInstanceDataHolder<>(new File(TWEAK_FOLDER, this.category.name().toLowerCase() + File.separator + this.name + ".yml"), this)
                 .save(false)
                 .load();
-
-        Map<String, Object> placeholders = getPlaceholders();
-        this.description = this.description
-                .stream()
-                .map(line -> ChatPaginator.wordWrap(line, 40))
-                .flatMap(Arrays::stream)
-                .map(string -> replacePlaceholders(string, placeholders))
-                .toList();
     }
 
     protected void registerEvents(EventBus bus) {
@@ -81,8 +68,8 @@ public abstract class Tweak implements Listener, Comparable<Tweak> {
         return this.description;
     }
 
-    public Map<String, Object> getPlaceholders() {
-        return Collections.emptyMap();
+    public TagResolver[] getTagResolvers() {
+        return new TagResolver[0];
     }
 
     @Override
@@ -104,13 +91,5 @@ public abstract class Tweak implements Listener, Comparable<Tweak> {
             return false;
         }
         return Objects.equals(this.name, other.name);
-    }
-
-    private String replacePlaceholders(String input, Map<String, Object> placeholders) {
-        for (Entry<String, Object> entry : placeholders.entrySet()) {
-            input = input.replace(entry.getKey(), entry.getValue().toString());
-        }
-
-        return input;
     }
 }

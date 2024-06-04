@@ -26,7 +26,7 @@ public class ItemNameDyeingTweak extends Tweak {
 
     public ItemNameDyeingTweak() {
         super("item-name-dyeing", Category.ITEM);
-        this.description = List.of(ChatColor.GRAY + "Allows dyeing parts or all of an items name by combining it with any color of dye in an anvil.");
+        this.description = List.of("<gray>Allows dyeing parts or all of an items name by combining it with any color of dye in an anvil.");
     }
 
     @Override

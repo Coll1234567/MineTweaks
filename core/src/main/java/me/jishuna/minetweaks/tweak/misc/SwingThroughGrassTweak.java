@@ -2,7 +2,6 @@ package me.jishuna.minetweaks.tweak.misc;
 
 import java.util.List;
 import java.util.Set;
-import net.md_5.bungee.api.ChatColor;
 import org.bukkit.FluidCollisionMode;
 import org.bukkit.Material;
 import org.bukkit.attribute.Attribute;
@@ -31,7 +30,7 @@ public class SwingThroughGrassTweak extends Tweak {
 
     public SwingThroughGrassTweak() {
         super("swing-through-grass", Category.MISC);
-        this.description = List.of(ChatColor.GRAY + "Allows attacking entities through tall grass blocks.");
+        this.description = List.of("<gray>Allows attacking entities through tall grass blocks.");
     }
 
     @Override

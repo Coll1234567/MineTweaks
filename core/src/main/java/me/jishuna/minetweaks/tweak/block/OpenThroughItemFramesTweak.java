@@ -1,7 +1,6 @@
 package me.jishuna.minetweaks.tweak.block;
 
 import java.util.List;
-import net.md_5.bungee.api.ChatColor;
 import org.bukkit.block.Block;
 import org.bukkit.block.Container;
 import org.bukkit.entity.ItemFrame;
@@ -19,8 +18,8 @@ public class OpenThroughItemFramesTweak extends Tweak implements ToggleableTweak
     public OpenThroughItemFramesTweak() {
         super("open-through-item-frames", Category.BLOCK);
         this.description = List
-                .of(ChatColor.GRAY + "Allows opening containers that item frames are attached to by right clicking them.",
-                        ChatColor.GRAY + "Sneaking will allow interacting with the item frame as normal.");
+                .of("<gray>Allows opening containers that item frames are attached to by right clicking them.",
+                        "<gray>Sneaking will allow interacting with the item frame as normal.");
     }
 
     @Override

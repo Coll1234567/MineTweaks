@@ -1,7 +1,6 @@
 package me.jishuna.minetweaks.tweak.item;
 
 import java.util.List;
-import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.event.inventory.ClickType;
 import org.bukkit.event.inventory.InventoryClickEvent;
@@ -18,7 +17,7 @@ public class InventoryCraftingTweak extends Tweak {
 
     public InventoryCraftingTweak() {
         super("inventory-crafting-table", Category.ITEM);
-        this.description = List.of(ChatColor.GRAY + "Allows players to use crafting tables from their inventory with the swap hand key (Default: F).");
+        this.description = List.of("<gray>Allows players to use crafting tables from their inventory with the swap hand key (Default: F).");
     }
 
     @Override

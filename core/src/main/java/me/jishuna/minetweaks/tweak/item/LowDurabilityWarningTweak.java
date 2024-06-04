@@ -4,7 +4,6 @@ import java.util.List;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.minimessage.tag.resolver.Formatter;
 import net.kyori.adventure.text.minimessage.tag.resolver.Placeholder;
-import net.md_5.bungee.api.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.player.PlayerItemDamageEvent;
 import org.bukkit.inventory.ItemStack;
@@ -32,7 +31,7 @@ public class LowDurabilityWarningTweak extends Tweak implements ToggleableTweak 
 
     public LowDurabilityWarningTweak() {
         super("low-durability-warning", Category.ITEM);
-        this.description = List.of(ChatColor.GRAY + "Warns players when an items durability is getting low.");
+        this.description = List.of("<gray>Warns players when an items durability is getting low.");
     }
 
     @Override

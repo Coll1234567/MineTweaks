@@ -1,7 +1,6 @@
 package me.jishuna.minetweaks.tweak.block;
 
 import java.util.List;
-import net.md_5.bungee.api.ChatColor;
 import org.bukkit.GameMode;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
@@ -22,7 +21,7 @@ public class QuickShulkerBoxCreationTweak extends Tweak {
 
     public QuickShulkerBoxCreationTweak() {
         super("quick-shulker-box-creation", Category.BLOCK);
-        this.description = List.of(ChatColor.GRAY + "Allows players to quickly convert containers into shulker boxes by right clicking them while holding a shulker shell in each hand.");
+        this.description = List.of("<gray>Allows players to quickly convert containers into shulker boxes by right clicking them while holding a shulker shell in each hand.");
     }
 
     @Override

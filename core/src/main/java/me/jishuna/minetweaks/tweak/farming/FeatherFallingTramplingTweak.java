@@ -1,7 +1,6 @@
 package me.jishuna.minetweaks.tweak.farming;
 
 import java.util.List;
-import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.Registry;
@@ -28,8 +27,8 @@ public class FeatherFallingTramplingTweak extends Tweak {
     public FeatherFallingTramplingTweak() {
         super("feather-falling-prevents-trampling", Category.FARMING);
         this.description = List
-                .of(ChatColor.GRAY + "Prevents players from trampling farmland when wearing feather falling boots.", "",
-                        ChatColor.GRAY + "Minimum Enchantment Level: %min%");
+                .of("<gray>Prevents players from trampling farmland when wearing feather falling boots.", "",
+                        "<gray>Minimum Enchantment Level: %min%");
     }
 
     @Override

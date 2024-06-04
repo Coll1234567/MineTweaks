@@ -1,7 +1,6 @@
 package me.jishuna.minetweaks.tweak.mob;
 
 import java.util.List;
-import net.md_5.bungee.api.ChatColor;
 import org.bukkit.GameMode;
 import org.bukkit.Sound;
 import org.bukkit.Tag;
@@ -19,7 +18,7 @@ public class SilenceMobsTweak extends Tweak {
 
     public SilenceMobsTweak() {
         super("silence-mobs", Category.MOB);
-        this.description = List.of(ChatColor.GRAY + "Allows players to silence mobs by right clicking them with a block of wool.");
+        this.description = List.of("<gray>Allows players to silence mobs by right clicking them with a block of wool.");
     }
 
     @Override

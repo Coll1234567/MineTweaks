@@ -1,7 +1,6 @@
 package me.jishuna.minetweaks.tweak.item;
 
 import java.util.List;
-import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.event.inventory.ClickType;
 import org.bukkit.event.inventory.InventoryClickEvent;
@@ -18,7 +17,7 @@ public class InventoryEnderChestTweak extends Tweak {
 
     public InventoryEnderChestTweak() {
         super("inventory-ender-chest", Category.ITEM);
-        this.description = List.of(ChatColor.GRAY + "Allows players to use ender chests from their inventory with the swap hand key (Default: F).");
+        this.description = List.of("<gray>Allows players to use ender chests from their inventory with the swap hand key (Default: F).");
     }
 
     @Override
