@@ -14,7 +14,7 @@ public class MineTweaks extends Plugin {
     @Override
     public void onEnable(boolean reload) {
         Messages.initialize("messages.json");
-        Commands.register("minetweaks", new MineTweaksCommand());
+        Commands.register(new MineTweaksCommand());
 
         Tasks.runTimer(Registries.TWEAK::tick, 5);
 

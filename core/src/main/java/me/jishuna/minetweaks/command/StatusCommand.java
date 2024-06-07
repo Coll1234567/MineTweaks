@@ -1,11 +1,13 @@
 package me.jishuna.minetweaks.command;
 
+import java.util.List;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.event.ClickEvent;
 import net.kyori.adventure.text.event.HoverEvent;
 import net.kyori.adventure.text.minimessage.tag.resolver.Placeholder;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import me.jishuna.jishlib.command.CommandInfo;
 import me.jishuna.jishlib.command.argument.ArgumentQueue;
 import me.jishuna.jishlib.command.node.LeafNode;
 import me.jishuna.jishlib.message.Messages;
@@ -17,7 +19,7 @@ import me.jishuna.minetweaks.tweak.Tweak;
 public class StatusCommand extends LeafNode {
 
     protected StatusCommand() {
-        super("minetweaks.command.status");
+        super(new CommandInfo("status", "minetweaks.command.status", List.of()));
     }
 
     @Override

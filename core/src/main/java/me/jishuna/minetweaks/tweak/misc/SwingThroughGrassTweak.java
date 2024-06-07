@@ -13,16 +13,17 @@ import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.util.RayTraceResult;
-import me.jishuna.jishlib.config.Comment;
-import me.jishuna.jishlib.config.Path;
+import me.jishuna.jishlib.config.annotation.Comment;
+import me.jishuna.jishlib.config.annotation.Path;
 import me.jishuna.jishlib.event.EventBus;
-import me.jishuna.jishlib.util.Capabilities;
+import me.jishuna.jishlib.util.MinecraftVersion;
 import me.jishuna.minetweaks.tweak.Category;
 import me.jishuna.minetweaks.tweak.RegisterTweak;
 import me.jishuna.minetweaks.tweak.Tweak;
 
 @RegisterTweak
 public class SwingThroughGrassTweak extends Tweak {
+    private static final boolean NEW_ATTRIBUTES = MinecraftVersion.CURRENT_VERSION.newerThanOrEqual(MinecraftVersion.MC1_20_5);
 
     @Path("transparent-materials")
     @Comment("A list of materials that should not block attacks")
@@ -47,7 +48,7 @@ public class SwingThroughGrassTweak extends Tweak {
 
         Player player = event.getPlayer();
         double reachDistance;
-        if (Capabilities.NEW_ATTRIBUTES) {
+        if (NEW_ATTRIBUTES) {
             reachDistance = player.getAttribute(Attribute.PLAYER_ENTITY_INTERACTION_RANGE).getValue();
         } else {
             reachDistance = 3;

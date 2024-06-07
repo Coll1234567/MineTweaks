@@ -6,6 +6,7 @@ import java.util.List;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.util.StringUtil;
+import me.jishuna.jishlib.command.CommandInfo;
 import me.jishuna.jishlib.command.argument.ArgumentQueue;
 import me.jishuna.jishlib.command.node.LeafNode;
 import me.jishuna.minetweaks.Registries;
@@ -15,7 +16,7 @@ import me.jishuna.minetweaks.tweak.Tweak;
 public class ToggleCommand extends LeafNode {
 
     protected ToggleCommand() {
-        super("minetweaks.command.toggle");
+        super(new CommandInfo("toggle", "minetweaks.command.toggle", List.of()));
     }
 
     @Override
@@ -24,7 +25,7 @@ public class ToggleCommand extends LeafNode {
             return;
         }
 
-        Tweak tweak = Registries.TWEAK.get(args.poll());
+        Tweak tweak = Registries.TWEAK.get(args.poll(String.class));
         if (tweak == null || !(tweak instanceof ToggleableTweak toggleable)) {
             return;
         }
@@ -37,7 +38,7 @@ public class ToggleCommand extends LeafNode {
     protected List<String> handleTabComplete(CommandSender sender, ArgumentQueue args) {
         if (args.size() == 1) {
             List<String> toggleable = Registries.TWEAK.getToggleableTweaks().stream().map(Tweak.class::cast).map(Tweak::getName).toList();
-            return StringUtil.copyPartialMatches(args.poll(), toggleable, new ArrayList<>());
+            return StringUtil.copyPartialMatches(args.poll(String.class), toggleable, new ArrayList<>());
         }
 
         return Collections.emptyList();

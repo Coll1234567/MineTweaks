@@ -23,7 +23,7 @@ public class TweakRegistry extends Registry<String, Tweak> {
     public void reload() {
         this.tickingTweaks.clear();
         this.toggleableTweaks.clear();
-        Plugin.getInstance().getEventBus().discard();
+        Plugin.getInstance().getEventBus().cleanup();
 
         getValues().forEach(tweak -> {
             tweak.reload();
