@@ -14,7 +14,7 @@ public class DisableMobTramplingTweak extends Tweak {
     public DisableMobTramplingTweak() {
         super("disable-mob-trampling", Category.MOB);
         this.description = List
-                .of("<gray>Prevents mobs from trampling farmland.");
+                .of("<gray><!i>Prevents mobs from trampling farmland.");
     }
 
     @Override

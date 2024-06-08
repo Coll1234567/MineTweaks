@@ -1,6 +1,8 @@
 package me.jishuna.minetweaks.tweak.item;
 
 import java.util.List;
+import net.kyori.adventure.text.minimessage.tag.resolver.Formatter;
+import net.kyori.adventure.text.minimessage.tag.resolver.TagResolver;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.entity.EntityResurrectEvent;
@@ -21,8 +23,16 @@ public class TotemCooldownTweak extends Tweak {
     public TotemCooldownTweak() {
         super("totem-cooldown", Category.ITEM);
         this.description = List
-                .of("<gray>Adds a cooldown to totems of undying, preventing them from being used in quick succession.", "",
-                        "<gray>Cooldown: %cooldown% seconds.");
+                .of("<gray><!i>Adds a cooldown to totems of undying, preventing them from being used in quick succession.", "",
+                        "<gray><!i>Cooldown: <green><seconds> seconds.");
+    }
+
+    @Override
+    public TagResolver[] getTagResolvers() {
+        return new TagResolver[] {
+                Formatter.number("ticks", this.cooldown),
+                Formatter.number("seconds", this.cooldown / 20)
+        };
     }
 
     @Override

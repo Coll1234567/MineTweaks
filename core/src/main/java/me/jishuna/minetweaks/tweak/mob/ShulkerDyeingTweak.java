@@ -18,7 +18,7 @@ public class ShulkerDyeingTweak extends Tweak {
 
     public ShulkerDyeingTweak() {
         super("shulker-dyeing", Category.MOB);
-        this.description = List.of("<gray>Allows players to dye living shulkers using any color of dye.");
+        this.description = List.of("<gray><!i>Allows players to dye living shulkers using any color of dye.");
     }
 
     @Override

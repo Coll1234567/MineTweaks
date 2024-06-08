@@ -1,6 +1,8 @@
 package me.jishuna.minetweaks.tweak.mob;
 
 import java.util.List;
+import net.kyori.adventure.text.minimessage.tag.resolver.Formatter;
+import net.kyori.adventure.text.minimessage.tag.resolver.TagResolver;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.attribute.AttributeInstance;
 import org.bukkit.entity.EntityType;
@@ -22,7 +24,14 @@ public class WitherHealthTweak extends Tweak {
 
     public WitherHealthTweak() {
         super("increased-wither-health", Category.MOB);
-        this.description = List.of("<gray>Increases the health of the wither to %health%.");
+        this.description = List.of("<gray><!i>Increases the health of the wither to <green><health><gray>.");
+    }
+
+    @Override
+    public TagResolver[] getTagResolvers() {
+        return new TagResolver[] {
+                Formatter.number("health", this.health)
+        };
     }
 
     @Override

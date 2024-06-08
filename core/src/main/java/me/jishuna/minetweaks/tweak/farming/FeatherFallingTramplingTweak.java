@@ -1,6 +1,8 @@
 package me.jishuna.minetweaks.tweak.farming;
 
 import java.util.List;
+import net.kyori.adventure.text.minimessage.tag.resolver.Formatter;
+import net.kyori.adventure.text.minimessage.tag.resolver.TagResolver;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.Registry;
@@ -27,8 +29,15 @@ public class FeatherFallingTramplingTweak extends Tweak {
     public FeatherFallingTramplingTweak() {
         super("feather-falling-prevents-trampling", Category.FARMING);
         this.description = List
-                .of("<gray>Prevents players from trampling farmland when wearing feather falling boots.", "",
-                        "<gray>Minimum Enchantment Level: %min%");
+                .of("<gray><!i>Prevents players from trampling farmland when wearing feather falling boots.", "",
+                        "<gray><!i>Minimum Enchantment Level: <green><min_level>");
+    }
+
+    @Override
+    public TagResolver[] getTagResolvers() {
+        return new TagResolver[] {
+                Formatter.number("min_level", this.minLevel)
+        };
     }
 
     @Override

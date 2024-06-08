@@ -17,7 +17,7 @@ public class InventoryEnderChestTweak extends Tweak {
 
     public InventoryEnderChestTweak() {
         super("inventory-ender-chest", Category.ITEM);
-        this.description = List.of("<gray>Allows players to use ender chests from their inventory with the swap hand key (Default: F).");
+        this.description = List.of("<gray><!i>Allows players to use ender chests from their inventory with the swap hand key (Default: F).");
     }
 
     @Override

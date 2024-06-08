@@ -18,7 +18,7 @@ public class UnlockAllRecipesTweak extends Tweak {
 
     public UnlockAllRecipesTweak() {
         super("unlock-all-recipes", Category.CRAFTING);
-        this.description = List.of("<gray>Unlocks all recipes for players when they join the server.");
+        this.description = List.of("<gray><!i>Unlocks all recipes for players when they join the server.");
     }
 
     @Override

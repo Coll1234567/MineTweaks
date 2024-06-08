@@ -34,7 +34,7 @@ public class CreeperGriefingTweak extends Tweak {
 
     public CreeperGriefingTweak() {
         super("nerf-creeper-griefing", Category.MOB);
-        this.description = List.of("<gray>Allows reducing or disabling the damage caused by creepers when they explode.");
+        this.description = List.of("<gray><!i>Allows reducing or disabling the damage caused by creepers when they explode.");
     }
 
     @Override

@@ -1,6 +1,9 @@
 package me.jishuna.minetweaks.tweak.farming;
 
 import java.util.List;
+import net.kyori.adventure.text.minimessage.tag.resolver.Formatter;
+import net.kyori.adventure.text.minimessage.tag.resolver.Placeholder;
+import net.kyori.adventure.text.minimessage.tag.resolver.TagResolver;
 import org.bukkit.GameMode;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
@@ -36,10 +39,19 @@ public class SugarcaneBonemealTweak extends Tweak {
     public SugarcaneBonemealTweak() {
         super("sugarcane-bonemealing", Category.FARMING);
         this.description = List
-                .of("<gray>Allows players and dispensers to grow cactus using bonemeal.", "",
-                        "<gray>Enabled For Players: %player%",
-                        "<gray>Enabled For Dispensers: %dispenser%",
-                        "<gray>Max Growth Height: %max-height%");
+                .of("<gray><!i>Allows players and dispensers to grow cactus using bonemeal.", "",
+                        "<gray><!i>Enabled For Players: <green><enable_player>",
+                        "<gray><!i>Enabled For Dispensers: <green><enable_dispenser>",
+                        "<gray><!i>Max Growth Height: <green><max_height>");
+    }
+
+    @Override
+    public TagResolver[] getTagResolvers() {
+        return new TagResolver[] {
+                Placeholder.unparsed("enable_player", String.valueOf(this.enablePlayer)),
+                Placeholder.unparsed("enable_dispenser", String.valueOf(this.enableDispenser)),
+                Formatter.number("max_height", this.maxHeight)
+        };
     }
 
     @Override

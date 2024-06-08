@@ -7,7 +7,7 @@ import net.kyori.adventure.text.minimessage.tag.resolver.TagResolver;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import me.jishuna.jishlib.Plugin;
-import me.jishuna.jishlib.config.ReloadableInstanceDataHolder;
+import me.jishuna.jishlib.config.ReloadableDataHolder;
 import me.jishuna.jishlib.config.annotation.Comment;
 import me.jishuna.jishlib.config.annotation.Path;
 import me.jishuna.jishlib.event.EventBus;
@@ -27,7 +27,7 @@ public abstract class Tweak implements Listener, Comparable<Tweak> {
 
     @Path("description")
     @Comment("The description of this tweak as seen in game.")
-    protected List<String> description = List.of("<gray>No Description");
+    protected List<String> description = List.of("<gray><!i>No Description");
 
     private final String name;
     private final Category category;
@@ -40,9 +40,8 @@ public abstract class Tweak implements Listener, Comparable<Tweak> {
     }
 
     public void reload() {
-        new ReloadableInstanceDataHolder<>(new File(TWEAK_FOLDER, this.category.name().toLowerCase() + File.separator + this.name + ".yml"), this)
-                .save(false)
-                .load();
+        File file = new File(TWEAK_FOLDER, this.category.name().toLowerCase() + File.separator + this.name + ".yml");
+        ReloadableDataHolder.create(file, this).save(false).load();
     }
 
     protected void registerEvents(EventBus bus) {

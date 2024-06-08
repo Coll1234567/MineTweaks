@@ -21,7 +21,7 @@ public class QuickShulkerBoxCreationTweak extends Tweak {
 
     public QuickShulkerBoxCreationTweak() {
         super("quick-shulker-box-creation", Category.BLOCK);
-        this.description = List.of("<gray>Allows players to quickly convert containers into shulker boxes by right clicking them while holding a shulker shell in each hand.");
+        this.description = List.of("<gray><!i>Allows players to quickly convert containers into shulker boxes by right clicking them while holding a shulker shell in each hand.");
     }
 
     @Override

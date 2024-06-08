@@ -25,7 +25,7 @@ public class PoisonPotatoBabyMobsTweak extends Tweak {
 
     public PoisonPotatoBabyMobsTweak() {
         super("poison-potato-baby-mobs", Category.MOB);
-        this.description = List.of("<gray>Allows players to feed poisonous potatoes to baby mobs to stop them from becoming an adult permanently.");
+        this.description = List.of("<gray><!i>Allows players to feed poisonous potatoes to baby mobs to stop them from becoming an adult permanently.");
     }
 
     @Override

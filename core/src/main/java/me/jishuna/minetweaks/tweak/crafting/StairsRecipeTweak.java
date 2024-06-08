@@ -3,6 +3,8 @@ package me.jishuna.minetweaks.tweak.crafting;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import net.kyori.adventure.text.minimessage.tag.resolver.Formatter;
+import net.kyori.adventure.text.minimessage.tag.resolver.TagResolver;
 import org.bukkit.Bukkit;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.Recipe;
@@ -24,7 +26,14 @@ public class StairsRecipeTweak extends Tweak {
 
     public StairsRecipeTweak() {
         super("extra-stairs", Category.CRAFTING);
-        this.description = List.of("<gray>Changes the amount of stairs recieved when crafting to %amount%.");
+        this.description = List.of("<gray><!i>Changes the amount of stairs recieved when crafting to <green><amount><gray>.");
+    }
+
+    @Override
+    public TagResolver[] getTagResolvers() {
+        return new TagResolver[] {
+                Formatter.number("amount", this.amount)
+        };
     }
 
     @Override

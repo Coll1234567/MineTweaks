@@ -36,7 +36,7 @@ public class RightClickHarvestingTweak extends Tweak implements ToggleableTweak 
 
     public RightClickHarvestingTweak() {
         super("right-click-harvesting", Category.FARMING);
-        this.description = List.of("<gray>Allows players to quickly harvest fully-grown crops by right clicking.");
+        this.description = List.of("<gray><!i>Allows players to quickly harvest fully-grown crops by right clicking.");
     }
 
     @Override

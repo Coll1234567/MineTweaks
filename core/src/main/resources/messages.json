@@ -1,12 +1,13 @@
 {
-  "gui.tweaks.name": "<black>Tweaks (<tweak_count>)",
-  "button.close-inventory.name": "<red><!i>Close Inventory",
   "tweak.name": "<white><!i><name>",
-  "command.reload.success": "<green>Reload Complete",
-  "tweak.status-prefix": "<dark_aqua>========== <gold>Personal Tweak Toggle Status <dark_aqua>==========",
-  "tweak.status": "<gold><name>: <status>",
-  "tweak.status-suffix": "<dark_aqua>==============================================",
+  "tweak.status.suffix": "<dark_aqua>==============================================",
+  "command.invalid-arg": "<red>Invalid Argument: <gray><input><red>. <br>Valid Arguments: <gray><args><red>.",
+  "button.close-inventory.name": "<red><!i>Close Inventory",
   "tweak.status-hover": "<green>Click to Toggle",
-  "tweak.enabled": "<green><bold>Enabled",
-  "tweak.disabled": "<red><bold>Disabled"
+  "command.reload.success": "<green>Reload Complete",
+  "gui.tweaks.name": "<black>Tweaks (<tweak_count>)",
+  "tweak.disabled": "<red><bold>Disabled",
+  "tweak.status.prefix": "<dark_aqua>========== <gold>Personal Tweak Toggle Status <dark_aqua>==========",
+  "tweak.status": "<gold><name>: <status>",
+  "tweak.enabled": "<green><bold>Enabled"
 }

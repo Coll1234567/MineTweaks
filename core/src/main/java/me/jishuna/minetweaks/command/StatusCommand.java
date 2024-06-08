@@ -32,7 +32,7 @@ public class StatusCommand extends LeafNode {
     }
 
     public static void sendStatus(Player player) {
-        Components.sendMessage(player, Messages.get("tweak.status-prefix"));
+        Components.sendMessage(player, Messages.get("tweak.status.prefix"));
         for (ToggleableTweak tweak : Registries.TWEAK.getToggleableTweaks()) {
             Component state = tweak.isEnabled(player) ? Messages.get("tweak.enabled") : Messages.get("tweak.disabled");
             Component component = Messages
@@ -44,6 +44,6 @@ public class StatusCommand extends LeafNode {
 
             Components.sendMessage(player, component);
         }
-        Components.sendMessage(player, Messages.get("tweak.status-suffix"));
+        Components.sendMessage(player, Messages.get("tweak.status.suffix"));
     }
 }

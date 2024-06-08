@@ -15,7 +15,7 @@ public class WearableBannersTweak extends Tweak {
 
     public WearableBannersTweak() {
         super("wearable-banners", Category.ITEM);
-        this.description = List.of("<gray>Allows players to wear any type of banner on their head.");
+        this.description = List.of("<gray><!i>Allows players to wear any type of banner on their head.");
     }
 
     @Override

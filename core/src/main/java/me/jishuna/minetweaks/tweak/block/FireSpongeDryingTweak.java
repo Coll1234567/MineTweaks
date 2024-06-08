@@ -19,7 +19,7 @@ public class FireSpongeDryingTweak extends Tweak {
     public FireSpongeDryingTweak() {
         super("fire-sponge-drying", Category.BLOCK);
         this.description = List
-                .of("<gray>Allows wet sponge to be dried when right clicked with a flint and steel.");
+                .of("<gray><!i>Allows wet sponge to be dried when right clicked with a flint and steel.");
     }
 
     @Override

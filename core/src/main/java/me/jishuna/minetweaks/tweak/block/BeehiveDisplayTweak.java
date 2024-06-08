@@ -28,7 +28,7 @@ public class BeehiveDisplayTweak extends Tweak {
 
     public BeehiveDisplayTweak() {
         super("beehive-display", Category.BLOCK);
-        this.description = List.of("<gray>Right clicking on a beehive or bee nest with an empty hand will show information about the amount of honey and number of bees within the hive.");
+        this.description = List.of("<gray><!i>Right clicking on a beehive or bee nest with an empty hand will show information about the amount of honey and number of bees within the hive.");
     }
 
     @Override

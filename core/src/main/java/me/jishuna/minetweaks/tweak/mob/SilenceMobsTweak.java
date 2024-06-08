@@ -18,7 +18,7 @@ public class SilenceMobsTweak extends Tweak {
 
     public SilenceMobsTweak() {
         super("silence-mobs", Category.MOB);
-        this.description = List.of("<gray>Allows players to silence mobs by right clicking them with a block of wool.");
+        this.description = List.of("<gray><!i>Allows players to silence mobs by right clicking them with a block of wool.");
     }
 
     @Override

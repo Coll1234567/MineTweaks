@@ -18,8 +18,8 @@ public class AnvilCobblestoneTweak extends Tweak {
     public AnvilCobblestoneTweak() {
         super("anvil-cobblestone-conversion", Category.BLOCK);
         this.description = List
-                .of("<gray>Allows anvils to convert cobblestone into sand when landing on top of it.",
-                        "<gray>This allows for renewable sand without duplication exploits.");
+                .of("<gray><!i>Allows anvils to convert cobblestone into sand when landing on top of it.",
+                        "<gray><!i>This allows for renewable sand without duplication exploits.");
     }
 
     @Override

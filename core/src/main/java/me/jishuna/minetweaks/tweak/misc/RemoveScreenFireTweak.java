@@ -15,7 +15,7 @@ public class RemoveScreenFireTweak extends Tweak {
 
     public RemoveScreenFireTweak() {
         super("remove-screen-fire", Category.MISC);
-        this.description = List.of("<gray>Hides the on screen fire effect when players are immune to fire damage.");
+        this.description = List.of("<gray><!i>Hides the on screen fire effect when players are immune to fire damage.");
     }
 
     @Override

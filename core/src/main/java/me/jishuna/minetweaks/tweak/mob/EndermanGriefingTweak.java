@@ -13,7 +13,7 @@ public class EndermanGriefingTweak extends Tweak {
 
     public EndermanGriefingTweak() {
         super("disable-enderman-griefing", Category.MOB);
-        this.description = List.of("<gray>Prevents enderman from picking up or placing blocks.");
+        this.description = List.of("<gray><!i>Prevents enderman from picking up or placing blocks.");
     }
 
     @Override

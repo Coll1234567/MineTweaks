@@ -31,7 +31,7 @@ public class LowDurabilityWarningTweak extends Tweak implements ToggleableTweak 
 
     public LowDurabilityWarningTweak() {
         super("low-durability-warning", Category.ITEM);
-        this.description = List.of("<gray>Warns players when an items durability is getting low.");
+        this.description = List.of("<gray><!i>Warns players when an items durability is getting low.");
     }
 
     @Override

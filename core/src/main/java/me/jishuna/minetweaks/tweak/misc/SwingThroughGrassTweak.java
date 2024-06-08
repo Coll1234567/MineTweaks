@@ -31,7 +31,7 @@ public class SwingThroughGrassTweak extends Tweak {
 
     public SwingThroughGrassTweak() {
         super("swing-through-grass", Category.MISC);
-        this.description = List.of("<gray>Allows attacking entities through tall grass blocks.");
+        this.description = List.of("<gray><!i>Allows attacking entities through tall grass blocks.");
     }
 
     @Override

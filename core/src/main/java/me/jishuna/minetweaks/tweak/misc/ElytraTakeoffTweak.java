@@ -25,7 +25,7 @@ public class ElytraTakeoffTweak extends Tweak {
 
     public ElytraTakeoffTweak() {
         super("elytra-takeoff", Category.MISC);
-        this.description = List.of("<gray>Allows players to easily take off with an elytra by right clicking with a firework while on the ground.");
+        this.description = List.of("<gray><!i>Allows players to easily take off with an elytra by right clicking with a firework while on the ground.");
     }
 
     @Override

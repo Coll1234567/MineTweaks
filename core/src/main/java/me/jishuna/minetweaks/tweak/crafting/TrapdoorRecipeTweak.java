@@ -3,6 +3,8 @@ package me.jishuna.minetweaks.tweak.crafting;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import net.kyori.adventure.text.minimessage.tag.resolver.Formatter;
+import net.kyori.adventure.text.minimessage.tag.resolver.TagResolver;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
@@ -25,7 +27,14 @@ public class TrapdoorRecipeTweak extends Tweak {
 
     public TrapdoorRecipeTweak() {
         super("extra-trapdoors", Category.CRAFTING);
-        this.description = List.of("<gray>Changes the amount of wooden trapdoors recieved when crafting to %amount%.");
+        this.description = List.of("<gray><!i>Changes the amount of wooden trapdoors recieved when crafting to <green><amount><gray>.");
+    }
+
+    @Override
+    public TagResolver[] getTagResolvers() {
+        return new TagResolver[] {
+                Formatter.number("amount", this.amount)
+        };
     }
 
     @Override

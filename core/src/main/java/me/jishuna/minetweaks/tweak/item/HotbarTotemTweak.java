@@ -22,7 +22,7 @@ public class HotbarTotemTweak extends Tweak {
 
     public HotbarTotemTweak() {
         super("hotbar-totems", Category.ITEM);
-        this.description = List.of("<gray>Allows totems of undying to activate from any hotbar slot.");
+        this.description = List.of("<gray><!i>Allows totems of undying to activate from any hotbar slot.");
     }
 
     @Override

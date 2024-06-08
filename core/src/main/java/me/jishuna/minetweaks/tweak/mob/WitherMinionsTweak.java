@@ -24,7 +24,7 @@ public class WitherMinionsTweak extends Tweak {
 
     public WitherMinionsTweak() {
         super("wither-minions", Category.MOB);
-        this.description = List.of("<gray>Withers spawn wither skeletons when reduced to half health.");
+        this.description = List.of("<gray><!i>Withers spawn wither skeletons when reduced to half health.");
     }
 
     @Override

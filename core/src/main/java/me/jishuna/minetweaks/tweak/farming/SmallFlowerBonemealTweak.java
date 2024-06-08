@@ -2,6 +2,8 @@ package me.jishuna.minetweaks.tweak.farming;
 
 import java.util.List;
 import java.util.Set;
+import net.kyori.adventure.text.minimessage.tag.resolver.Placeholder;
+import net.kyori.adventure.text.minimessage.tag.resolver.TagResolver;
 import org.bukkit.GameMode;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
@@ -41,9 +43,17 @@ public class SmallFlowerBonemealTweak extends Tweak {
     public SmallFlowerBonemealTweak() {
         super("small-flower-bonemealing", Category.FARMING);
         this.description = List
-                .of("<gray>Allows players and dispensers to quickly duplicate small flowers with bonemeal.", "",
-                        "<gray>Enabled For Players: %player%",
-                        "<gray>Enabled For Dispensers: %dispenser%");
+                .of("<gray><!i>Allows players and dispensers to quickly duplicate small flowers with bonemeal.", "",
+                        "<gray><!i>Enabled For Players: <green><enable_player>",
+                        "<gray><!i>Enabled For Dispensers: <green><enable_dispenser>");
+    }
+
+    @Override
+    public TagResolver[] getTagResolvers() {
+        return new TagResolver[] {
+                Placeholder.unparsed("enable_player", String.valueOf(this.enablePlayer)),
+                Placeholder.unparsed("enable_dispenser", String.valueOf(this.enableDispenser))
+        };
     }
 
     @Override

@@ -21,8 +21,8 @@ public class OpenThroughSignsTweak extends Tweak implements ToggleableTweak {
     public OpenThroughSignsTweak() {
         super("open-through-signs", Category.BLOCK);
         this.description = List
-                .of("<gray>Allows opening containers that signs are attached to by right clicking them.",
-                        "<gray>Sneaking will allow interacting with the sign as normal.");
+                .of("<gray><!i>Allows opening containers that signs are attached to by right clicking them.",
+                        "<gray><!i>Sneaking will allow interacting with the sign as normal.");
     }
 
     @Override

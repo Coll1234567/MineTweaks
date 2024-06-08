@@ -17,7 +17,7 @@ public class ChickenPluckingTweak extends Tweak {
 
     public ChickenPluckingTweak() {
         super("chicken-plucking", Category.MOB);
-        this.description = List.of("<gray>Allows players to pluck feathers from a chicken by right clicking while sneaking, dealing half a heart of damage in the process.");
+        this.description = List.of("<gray><!i>Allows players to pluck feathers from a chicken by right clicking while sneaking, dealing half a heart of damage in the process.");
     }
 
     @Override

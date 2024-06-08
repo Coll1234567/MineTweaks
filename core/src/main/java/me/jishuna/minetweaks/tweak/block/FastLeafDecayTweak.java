@@ -28,7 +28,7 @@ public class FastLeafDecayTweak extends Tweak {
 
     public FastLeafDecayTweak() {
         super("fast-leaf-decay", Category.BLOCK);
-        this.description = List.of("<gray>Makes leaves decay much faster when the logs supporting them are broken.");
+        this.description = List.of("<gray><!i>Makes leaves decay much faster when the logs supporting them are broken.");
     }
 
     @Override

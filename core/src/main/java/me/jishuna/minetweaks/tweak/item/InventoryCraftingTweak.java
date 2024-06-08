@@ -17,7 +17,7 @@ public class InventoryCraftingTweak extends Tweak {
 
     public InventoryCraftingTweak() {
         super("inventory-crafting-table", Category.ITEM);
-        this.description = List.of("<gray>Allows players to use crafting tables from their inventory with the swap hand key (Default: F).");
+        this.description = List.of("<gray><!i>Allows players to use crafting tables from their inventory with the swap hand key (Default: F).");
     }
 
     @Override

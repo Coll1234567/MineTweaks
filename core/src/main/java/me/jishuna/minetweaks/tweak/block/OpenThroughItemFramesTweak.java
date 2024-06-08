@@ -18,8 +18,8 @@ public class OpenThroughItemFramesTweak extends Tweak implements ToggleableTweak
     public OpenThroughItemFramesTweak() {
         super("open-through-item-frames", Category.BLOCK);
         this.description = List
-                .of("<gray>Allows opening containers that item frames are attached to by right clicking them.",
-                        "<gray>Sneaking will allow interacting with the item frame as normal.");
+                .of("<gray><!i>Allows opening containers that item frames are attached to by right clicking them.",
+                        "<gray><!i>Sneaking will allow interacting with the item frame as normal.");
     }
 
     @Override

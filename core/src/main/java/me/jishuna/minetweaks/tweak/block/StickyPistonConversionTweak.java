@@ -21,7 +21,7 @@ public class StickyPistonConversionTweak extends Tweak {
 
     public StickyPistonConversionTweak() {
         super("sticky-piston-conversion", Category.BLOCK);
-        this.description = List.of("<gray>Allows players to quickly convert pistons into sticky pistons by right clicking them while holding a slimeball.");
+        this.description = List.of("<gray><!i>Allows players to quickly convert pistons into sticky pistons by right clicking them while holding a slimeball.");
     }
 
     @Override

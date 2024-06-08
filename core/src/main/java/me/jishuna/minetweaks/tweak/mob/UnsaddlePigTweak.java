@@ -16,7 +16,7 @@ public class UnsaddlePigTweak extends Tweak {
 
     public UnsaddlePigTweak() {
         super("unsaddle-pigs", Category.MOB);
-        this.description = List.of("<gray>Allows players to remove saddles from pigs by right clicking them with an empty hand while sneaking.");
+        this.description = List.of("<gray><!i>Allows players to remove saddles from pigs by right clicking them with an empty hand while sneaking.");
     }
 
     @Override

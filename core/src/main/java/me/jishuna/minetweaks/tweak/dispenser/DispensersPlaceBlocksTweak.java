@@ -42,7 +42,7 @@ public class DispensersPlaceBlocksTweak extends Tweak {
 
     public DispensersPlaceBlocksTweak() {
         super("dispenser-block-placement", Category.DISPENSER);
-        this.description = List.of("<gray>Allows dispensers to place blocks in front of them when powered.");
+        this.description = List.of("<gray><!i>Allows dispensers to place blocks in front of them when powered.");
     }
 
     @Override

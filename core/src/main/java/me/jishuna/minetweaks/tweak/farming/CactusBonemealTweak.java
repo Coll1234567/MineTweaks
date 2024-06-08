@@ -1,6 +1,8 @@
 package me.jishuna.minetweaks.tweak.farming;
 
 import java.util.List;
+import net.kyori.adventure.text.minimessage.tag.resolver.Formatter;
+import net.kyori.adventure.text.minimessage.tag.resolver.TagResolver;
 import org.bukkit.GameMode;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
@@ -24,8 +26,15 @@ public class CactusBonemealTweak extends Tweak {
     public CactusBonemealTweak() {
         super("cactus-bonemealing", Category.FARMING);
         this.description = List
-                .of("<gray>Allows players to grow cactus using bonemeal.", "",
-                        "<gray>Max Growth Height: %max-height%");
+                .of("<gray><!i>Allows players to grow cactus using bonemeal.", "",
+                        "<gray><!i>Max Growth Height: <green><max_height>");
+    }
+
+    @Override
+    public TagResolver[] getTagResolvers() {
+        return new TagResolver[] {
+                Formatter.number("max_height", this.maxHeight)
+        };
     }
 
     @Override

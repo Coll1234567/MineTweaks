@@ -1,6 +1,8 @@
 package me.jishuna.minetweaks.tweak.block;
 
 import java.util.List;
+import net.kyori.adventure.text.minimessage.tag.resolver.Formatter;
+import net.kyori.adventure.text.minimessage.tag.resolver.TagResolver;
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
 import org.bukkit.Material;
@@ -31,9 +33,16 @@ public class DownwardsLadderPlacementTweak extends Tweak implements ToggleableTw
     public DownwardsLadderPlacementTweak() {
         super("downwards-ladder-placement", Category.BLOCK);
         this.description = List
-                .of("<gray>Allows building ladders downwards by right clicking on a ladder while holding a ladder.",
-                        "<gray>Requires a valid space below the set of ladders to place another ladder.", "",
-                        "<gray>Maximum Distance: %max-distance%");
+                .of("<gray><!i>Allows building ladders downwards by right clicking on a ladder while holding a ladder.",
+                        "<gray><!i>Requires a valid space below the set of ladders to place another ladder.", "",
+                        "<gray><!i>Maximum Distance: <green><max_distance>");
+    }
+
+    @Override
+    public TagResolver[] getTagResolvers() {
+        return new TagResolver[] {
+                Formatter.number("max_distance", this.maxDistance)
+        };
     }
 
     @Override

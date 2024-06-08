@@ -1,6 +1,8 @@
 package me.jishuna.minetweaks.tweak.block;
 
 import java.util.List;
+import net.kyori.adventure.text.minimessage.tag.resolver.Placeholder;
+import net.kyori.adventure.text.minimessage.tag.resolver.TagResolver;
 import org.bukkit.Material;
 import org.bukkit.Tag;
 import org.bukkit.block.Block;
@@ -33,9 +35,17 @@ public class DoubleDoorOpenTweak extends Tweak {
     public DoubleDoorOpenTweak() {
         super("double-door-opening", Category.BLOCK);
         this.description = List
-                .of("<gray>Makes both sides of a double door open and close together.", "",
-                        "<gray>Enabled For Players: %player%",
-                        "<gray>Enabled For Redstone: %redstone%");
+                .of("<gray><!i>Makes both sides of a double door open and close together.", "",
+                        "<gray><!i>Enabled For Players: <green><enable_player>",
+                        "<gray><!i>Enabled For Redstone: <green><enable_redstone>");
+    }
+
+    @Override
+    public TagResolver[] getTagResolvers() {
+        return new TagResolver[] {
+                Placeholder.unparsed("enable_player", String.valueOf(this.enablePlayer)),
+                Placeholder.unparsed("enable_redstone", String.valueOf(this.enableRedstone))
+        };
     }
 
     @Override

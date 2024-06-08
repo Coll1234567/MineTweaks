@@ -19,7 +19,7 @@ public class AutoStepTweak extends Tweak {
 
     public AutoStepTweak() {
         super("auto-step", Category.MISC);
-        this.description = List.of("<gray>Allows players to automatically step up one block.");
+        this.description = List.of("<gray><!i>Allows players to automatically step up one block.");
     }
 
     @Override

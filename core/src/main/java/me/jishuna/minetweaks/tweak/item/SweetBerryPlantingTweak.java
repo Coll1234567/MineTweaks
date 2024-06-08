@@ -18,7 +18,7 @@ public class SweetBerryPlantingTweak extends Tweak implements ToggleableTweak {
 
     public SweetBerryPlantingTweak() {
         super("sweet-berry-planting", Category.ITEM);
-        this.description = List.of("<gray>Stops players from planting sweet berries when trying to eat them, players must sneak to plant them.");
+        this.description = List.of("<gray><!i>Stops players from planting sweet berries when trying to eat them, players must sneak to plant them.");
     }
 
     @Override
